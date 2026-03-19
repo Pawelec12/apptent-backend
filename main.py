@@ -116,3 +116,6 @@ async def shopify_order_created(request: Request):
         del PENDING_CHECKOUTS[checkout_token]
         
     return {"status": "received"}
+@app.get("/")
+async def root():
+    return {"status": "Apptent Backend is running!"}
